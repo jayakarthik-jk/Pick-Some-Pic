@@ -49,23 +49,24 @@ function Post(props) {
       <div className="container-fluid">
         <div className="row">
           <div
-            className={`col-12 col-md-7 col-lg-8 col-xl-9  border-end border-bottom border-${BRAND_COLOR}`}
+            className={`col-12 col-lg-8 col-xl-9  border-end border-bottom border-${BRAND_COLOR}`}
             style={{
               display: "flex",
               justifyContent: "center",
               minHeight: "90vh",
+              maxWidth: "100vw",
             }}
           >
             <img
               src={post?.urls?.regular ? post?.urls?.regular : post?.urls?.raw}
               alt=""
-              className=" my-3"
+              className="my-3"
               loading="lazy"
-              style={{ maxHeight: "80vh" }}
+              style={{ maxHeight: "80vh", maxWidth: "80vw" }}
             />
           </div>
           <div
-            className={`col-12 col-md-5 col-lg-4 col-xl-3 border-bottom border-${BRAND_COLOR}`}
+            className={`col-12 col-lg-4 col-xl-3 border-bottom border-${BRAND_COLOR}`}
             style={{
               display: "flex",
               justifyContent: "center",

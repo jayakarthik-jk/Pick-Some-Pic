@@ -7,20 +7,14 @@ function Explore() {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(false);
   useEffect(() => {
-    const oldPosts = JSON.parse(sessionStorage.getItem("posts"));
-    if (oldPosts && oldPosts.length > 0) {
-      setPosts(oldPosts);
-    } else {
-      (async () => {
-        try {
-          const data = await getPosts();
-          sessionStorage.setItem("posts", JSON.stringify(data));
-          setPosts(data);
-        } catch (error) {
-          setError(true);
-        }
-      })();
-    }
+    (async () => {
+      try {
+        const data = await getPosts();
+        setPosts(data);
+      } catch (error) {
+        setError(true);
+      }
+    })();
   }, []);
 
   const handleAddMoreBtnClick = () => {
