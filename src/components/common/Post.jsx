@@ -7,12 +7,9 @@ import UserAvatar from "./UserAvatar";
 import RelatedPosts from "../RelatedPosts";
 import Placeholder from "./Placeholder";
 import Error from "./Error";
-
-import useColor from "./../../hooks/useColor";
 import { getPost } from "../../services/PostService";
 
 function Post(props) {
-  const { BRAND_COLOR } = useColor();
   const { id } = useParams();
   const [post, setPost] = useState({});
   const navigate = useNavigate();
@@ -49,7 +46,7 @@ function Post(props) {
       <div className="container-fluid">
         <div className="row">
           <div
-            className={`col-12 col-lg-8 col-xl-9  border-end border-bottom border-${BRAND_COLOR}`}
+            className={`col-12 col-lg-8 col-xl-9`}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -66,7 +63,7 @@ function Post(props) {
             />
           </div>
           <div
-            className={`col-12 col-lg-4 col-xl-3 border-bottom border-${BRAND_COLOR}`}
+            className={`col-12 col-lg-4 col-xl-3`}
             style={{
               display: "flex",
               justifyContent: "center",

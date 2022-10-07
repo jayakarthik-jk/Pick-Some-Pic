@@ -3,8 +3,10 @@ import { getRelatedPosts } from "./../services/PostService";
 import Placeholder from "./common/Placeholder";
 import Container from "./common/Container";
 import Error from "./common/Error";
+import useColor from "../hooks/useColor";
 
 function RelatedPosts({ username }) {
+  const { BRAND_COLOR } = useColor();
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(false);
   useEffect(() => {
@@ -27,7 +29,11 @@ function RelatedPosts({ username }) {
     );
   return (
     <>
-      <span className="fw-bold fs-4 px-5">Related Posts</span>
+      <div
+        className={`fw-bold fs-4 px-5 py-2 border-top border-${BRAND_COLOR}`}
+      >
+        Related Posts
+      </div>
       <Container posts={posts} disableAddMoreBtn />
     </>
   );
