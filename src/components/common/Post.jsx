@@ -59,7 +59,11 @@ function Post(props) {
               alt=""
               className="my-3"
               loading="lazy"
-              style={{ maxHeight: "80vh", maxWidth: "80vw" }}
+              style={{
+                maxHeight: "80vh",
+                maxWidth: "80vw",
+                objectFit: "cover",
+              }}
             />
           </div>
           <div
