@@ -77,7 +77,7 @@ function Post(props) {
           >
             <div className="p-2 pt-5 d-flex" style={{ flexDirection: "row" }}>
               <UserAvatar name={name} img={user_profile_image} />
-              <Like id={id} liked_by_user={liked_by_user} likes={likes} />
+              {/* <Like id={id} liked_by_user={liked_by_user} likes={likes} /> */}
             </div>
 
             <div className="py-3">

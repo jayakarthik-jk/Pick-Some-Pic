@@ -19,7 +19,7 @@ function NavLinks(props) {
             <b>Explore</b>
           </NavLink>
         </li>
-        {!sessionStorage.getItem("token") && (
+        {/* {!sessionStorage.getItem("token") && (
           <li className="nav-item text-center p-1 mx-2">
             <NavLink className="nav-link" to="login">
               <button
@@ -35,7 +35,7 @@ function NavLinks(props) {
               </button>
             </NavLink>
           </li>
-        )}
+        )} */}
       </ul>
     </div>
   );
